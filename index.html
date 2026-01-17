@@ -150,6 +150,7 @@
             justify-content: center;
             margin: 0 auto 20px;
             font-size: 2rem;
+            color: white;
         }
         
         .icon-card h3 {
@@ -555,7 +556,10 @@
             <div class="container">
                 <h1>Stanford Adolescent TMS Clinic</h1>
                 <p>Evidence-based brain stimulation for treatment-resistant depression in adolescents</p>
-                <a href="#referral-process" class="cta-button">Refer a Patient</a>
+                <div style="display: flex; gap: 15px; justify-content: center; align-items: center; flex-wrap: wrap;">
+                    <a href="#quick-referral-guide" class="cta-button" style="background: white; color: #8B0000; border: 2px solid white;">Check Suitability</a>
+                    <a href="https://redcap.stanford.edu/surveys/?s=YTRRK8TNP8NE9FNF" class="cta-button">Refer a Patient</a>
+                </div>
             </div>
         </div>
     </div>
@@ -570,7 +574,7 @@
                 <div class="icon-card">
                     <div class="icon">🧠</div>
                     <h3>Targeted</h3>
-                    <p>Stimulates specific brain regions linked to depression using magnetic fields</p>
+                    <p>Stimulates the left dorsolateral prefrontal cortex (DLPFC) linked to depression using magnetic fields</p>
                 </div>
                 
                 <div class="icon-card">
@@ -582,7 +586,7 @@
                 <div class="icon-card">
                     <div class="icon">🏥</div>
                     <h3>Adjunctive</h3>
-                    <p>Complements ongoing care—patients remain under referring provider's management</p>
+                    <p>Complements ongoing care. Patients remain under referring provider's management</p>
                 </div>
             </div>
         </div>
@@ -611,14 +615,14 @@
                 </div>
                 
                 <div class="stat-box">
-                    <span class="stat-number">50-60%</span>
+                    <span class="stat-number" style="white-space: nowrap;">50-60%</span>
                     <span class="stat-label">Response rate</span>
                 </div>
             </div>
 
             <div class="highlight-box">
                 <strong>FDA Approved March 2024</strong>
-                <p>For ages 15–21 with major depressive disorder as adjunctive treatment</p>
+                <p>For ages 15 or older with major depressive disorder as adjunctive treatment</p>
             </div>
         </div>
     </section>
@@ -654,7 +658,7 @@
     </section>
 
     <!-- Decision Tool -->
-    <section>
+    <section id="quick-referral-guide">
         <div class="container">
             <h2>Quick Referral Guide</h2>
             <p class="section-subtitle">Check if your patient may be a good fit</p>
@@ -685,18 +689,10 @@
                 </div>
                 
                 <div class="question">
-                    <label>Has your patient had a prior adverse reaction to TMS?</label>
+                    <label>Can your patient commit to 3+ clinic visits per week for 6-9 weeks?</label>
                     <div class="radio-group">
                         <label><input type="radio" name="q4" value="yes"> Yes</label>
                         <label><input type="radio" name="q4" value="no"> No</label>
-                    </div>
-                </div>
-                
-                <div class="question">
-                    <label>Can your patient commit to 3+ clinic visits per week for 6-9 weeks?</label>
-                    <div class="radio-group">
-                        <label><input type="radio" name="q5" value="yes"> Yes</label>
-                        <label><input type="radio" name="q5" value="no"> No</label>
                     </div>
                 </div>
                 
@@ -716,44 +712,39 @@
             <div class="process-container">
                 <div class="process-step">
                     <div class="step-number">1</div>
-                    <h4>Referral Review</h4>
-                    <p>Intake coordinator screens for eligibility</p>
+                    <h4>Complete Referral</h4>
+                    <p><a href="https://redcap.stanford.edu/surveys/?s=YTRRK8TNP8NE9FNF" style="color: #8B0000; font-weight: 600; text-decoration: underline;">Complete the Patient Referral Questionnaire</a></p>
                 </div>
                 
                 <div class="process-step">
                     <div class="step-number">2</div>
                     <h4>Patient Contact</h4>
-                    <p>Team schedules consultation, initiates pre-auth</p>
+                    <p>Patient is scheduled for a consultation to be seen by an interventional psychiatrist</p>
                 </div>
                 
                 <div class="process-step">
                     <div class="step-number">3</div>
                     <h4>TMS Assessment</h4>
-                    <p>Psychiatrist conducts screening and consent</p>
+                    <p>Psychiatrist conducts a full consultation to determine if patient is a good candidate for TMS. If eligible, we obtain insurance pre-authorization</p>
                 </div>
                 
                 <div class="process-step">
                     <div class="step-number">4</div>
-                    <h4>Motor Threshold</h4>
-                    <p>Individualized treatment dosing determined</p>
+                    <h4>Motor Threshold & Treatment Start</h4>
+                    <p>Patient's first session determines the resting motor threshold—the minimum stimulation intensity needed to produce a motor response. This individualizes treatment dosing, and treatment begins</p>
                 </div>
                 
                 <div class="process-step">
                     <div class="step-number">5</div>
                     <h4>Treatment Course</h4>
-                    <p>30-36 sessions, 3-5× weekly with TMS tech</p>
+                    <p>30-36 sessions, 3-5× weekly</p>
                 </div>
                 
                 <div class="process-step">
                     <div class="step-number">6</div>
                     <h4>Follow-Up</h4>
-                    <p>Assessment at continuity clinic, results shared</p>
+                    <p>Follow-up assessment 1-3 months after treatment completion at continuity clinic</p>
                 </div>
-            </div>
-
-            <div class="highlight-box">
-                <strong>Required Information</strong>
-                <p>Patient demographics • Treatment history • Depression rating scale (PHQ-9 or QIDS-A17) • Screening responses</p>
             </div>
         </div>
     </section>
@@ -767,11 +758,31 @@
             <div class="faq-container">
                 <div class="faq-item">
                     <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h4>What is the time commitment?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sessions last 3-20 minutes, daily (Monday-Friday) for 36 treatments. The first 30 are daily, with the final 6 tapered over 3 weeks.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h4>What are the side effects?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Most common is mild headache (50%) or scalp tapping sensations during treatment. Serious risks like seizure are exceedingly low (&lt;0.5%).</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
                         <h4>Can patients continue their current medications?</h4>
                         <span class="faq-toggle">+</span>
                     </div>
                     <div class="faq-answer">
-                        <p>Yes. TMS is adjunctive—patients continue current medications under your management.</p>
+                        <p>Yes, most medications can continue. However, minimize benzodiazepines as they may decrease TMS efficacy.</p>
                     </div>
                 </div>
                 
@@ -797,21 +808,11 @@
                 
                 <div class="faq-item">
                     <div class="faq-question" onclick="toggleFAQ(this)">
-                        <h4>How is safety monitored?</h4>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Comprehensive consultation screening, motor threshold testing, and supervised sessions with trained TMS technician.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">
                         <h4>What happens after treatment ends?</h4>
                         <span class="faq-toggle">+</span>
                     </div>
                     <div class="faq-answer">
-                        <p>Follow-up at our continuity clinic, results shared with you. Ongoing care continues under your management.</p>
+                        <p>Follow-up at our continuity clinic 1-3 months after completion. Ongoing care continues under your management.</p>
                     </div>
                 </div>
             </div>
@@ -825,17 +826,17 @@
             <div class="contact-grid">
                 <div class="contact-card">
                     <h3>📍 Location</h3>
-                    <p>401 Quarry Road<br>Stanford, CA</p>
+                    <p><a href="https://maps.app.goo.gl/zbXt8xmXbpZaFH729" style="color: white; text-decoration: underline;" target="_blank">401 Quarry Road<br>Stanford, CA</a></p>
                 </div>
                 
                 <div class="contact-card">
-                    <h3>📋 Stanford Providers</h3>
-                    <p>Submit referrals via RedCap</p>
+                    <h3>📋 Submit Referral</h3>
+                    <p><a href="https://redcap.stanford.edu/surveys/?s=YTRRK8TNP8NE9FNF" style="color: white; text-decoration: underline;" target="_blank">Complete Patient Referral Questionnaire</a></p>
                 </div>
                 
                 <div class="contact-card">
-                    <h3>💬 External Providers</h3>
-                    <p>Contact us to discuss referral pathway</p>
+                    <h3>🩺 Who Can Refer</h3>
+                    <p>Any medical or psychiatry provider</p>
                 </div>
             </div>
             <p style="margin-top: 40px; font-size: 1rem; opacity: 0.9;">Partnering with you to provide evidence-based care for treatment-resistant depression</p>
@@ -848,21 +849,20 @@
             const q2 = document.querySelector('input[name="q2"]:checked');
             const q3 = document.querySelector('input[name="q3"]:checked');
             const q4 = document.querySelector('input[name="q4"]:checked');
-            const q5 = document.querySelector('input[name="q5"]:checked');
             
             const resultDiv = document.getElementById('result');
             
-            if (!q1 || !q2 || !q3 || !q4 || !q5) {
+            if (!q1 || !q2 || !q3 || !q4) {
                 resultDiv.style.display = 'block';
                 resultDiv.className = 'result needs-discussion';
                 resultDiv.innerHTML = 'Please answer all questions to receive guidance.';
                 return;
             }
             
-            if (q1.value === 'yes' && q2.value === 'no' && q3.value === 'no' && q4.value === 'no' && q5.value === 'yes') {
+            if (q1.value === 'yes' && q2.value === 'no' && q3.value === 'no' && q4.value === 'yes') {
                 resultDiv.style.display = 'block';
                 resultDiv.className = 'result good-fit';
-                resultDiv.innerHTML = '✓ This patient may be a good candidate. Please submit a referral through RedCap—our team will review and contact the patient.';
+                resultDiv.innerHTML = '✓ This patient may be a good candidate. <a href="https://redcap.stanford.edu/surveys/?s=YTRRK8TNP8NE9FNF" style="color: #155724; font-weight: bold; text-decoration: underline;">Submit a referral here</a> and our team will review and contact the patient.';
             } else {
                 resultDiv.style.display = 'block';
                 resultDiv.className = 'result needs-discussion';
@@ -876,4 +876,12 @@
             
             allItems.forEach(item => {
                 if (item !== faqItem) {
-                    item.classList.
+                    item.classList.remove('active');
+                }
+            });
+            
+            faqItem.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
